@@ -8,13 +8,6 @@ pipeline {
                 }
             }
         }
-        stage('test'){
-            steps {
-                script {
-                    sh 'sleep 5'
-                }
-            }
-        }
         stage('push image') {
             steps {
                 script {
