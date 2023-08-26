@@ -1,15 +1,13 @@
 pipeline {
     agent {
-        node {
-            label 'docker'
+        docker {
+            image 'docker:dind'
         }
     }
     stages {
         stage('build image') {
             steps {
-                script {
-                    sh 'docker build -t new .'
-                }
+                sh 'docker build -t new .'
             }
         }
         stage('push image') {
