@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('build image') {
             steps {
-                sh 'docker build -t new .'
+                sh 'docker build -t new --no-cache .'
             }
         }
         stage('push image') {
