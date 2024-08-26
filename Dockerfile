@@ -1,7 +1,5 @@
 FROM node:20.15.1-alpine AS builder
 
-RUN npm install -g pkg
-
 WORKDIR /app
 
 COPY package.json .
